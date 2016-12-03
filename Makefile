@@ -1,6 +1,6 @@
 default: test
 
-build-openssl:
+build-openssl: 
 	./script/build-openssl-static.sh
 
 build-libssh2:

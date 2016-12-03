@@ -3,7 +3,6 @@
 set -ex
 
 VENDORED_PATH=vendor/libssh2
-
 OPENSSL_ROOT_DIR=`pwd`/vendor/openssl
 
 cd $VENDORED_PATH &&
@@ -13,6 +12,8 @@ cd build &&
 cmake -DTHREADSAFE=ON \
       -DBUILD_CLAR=OFF \
       -DOPENSSL_ROOT_DIR=$OPENSSL_ROOT_DIR \
+      -DOPENSSL_SSL_LIBRARY=$OPENSSL_ROOT_DIR/libssl.a \
+      -DOPENSSL_CRYPTO_LIBRARY=$OPENSSL_ROOT_DIR/libcrypto.a \
       -DBUILD_SHARED_LIBS=OFF \
       -DCMAKE_C_FLAGS=-fPIC \
       -DCMAKE_BUILD_TYPE="RelWithDebInfo" \
