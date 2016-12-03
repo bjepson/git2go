@@ -1,3 +1,12 @@
 [submodule "vendor/libgit2"]
 	path = vendor/libgit2
 	url = https://github.com/libgit2/libgit2
+[submodule "vendor/libssh2"]
+	path = vendor/libssh2
+	url = https://github.com/libssh2/libssh2.git
+[submodule "vendor/openssl"]
+	path = vendor/openssl
+	url = https://github.com/openssl/openssl.git
+[submodule "vendor/http-parser"]
+	path = vendor/http-parser
+	url = https://github.com/nodejs/http-parser.git
