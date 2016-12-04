@@ -1,6 +1,8 @@
 default: test
 
-build-openssl: 
+build-openssl: vendor/openssl/libssl.a
+
+vendor/openssl/libssl.a:
 	./script/build-openssl-static.sh
 
 build-libssh2:
